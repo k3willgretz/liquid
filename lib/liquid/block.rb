@@ -140,9 +140,9 @@ module Liquid
             context.resource_limits[:reached] = true
             raise MemoryError.new("Memory limits exceeded")
           end
-          unless token.is_a?(Block) && token.blank?
+          #unless token.is_a?(Block) && token.blank?
             output << token_output
-          end
+          #end
         rescue MemoryError => e
           raise e
         rescue ::StandardError => e
